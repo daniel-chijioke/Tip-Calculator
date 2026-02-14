@@ -12,6 +12,8 @@ function calculateBill() {
 }
 buttonJs.addEventListener('click', () => {
     calculateBill();
+    billAmount.value = '';
+    tipPercentage.value = '';
 });
 
 
@@ -24,5 +26,7 @@ billAmount.addEventListener('keydown', (event) => {
 tipPercentage.addEventListener('keydown', (event) => {
     if(event.key === 'Enter') {
         calculateBill();
+        billAmount.value = '';
+        tipPercentage.value = '';
     }
 });
